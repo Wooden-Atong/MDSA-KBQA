@@ -30,20 +30,20 @@ bash train_webqsp.sh
 
 Important arguments:
 
- --data_folder          Path to load dataset.
- --checkpoint_dir       Path to save checkpoint and logs.
- --num_step             Multi-hop reasoning steps, hyperparameters.
- --entity_dim           Hidden size of reasoning module.
- --eval_every           Number of interval epoches between evaluation.
- --experiment_name      The name of log and ckpt. If not defined, it will be generated with timestamp.
- --eps                  Accumulated probability to collect answers, used to generate answers and affect Precision, Recalll and F1 metric.
- --use_self_loop        If set, add a self-loop edge to all graph nodes.
- --use_inverse_relation If set, add reverse edges to graph.
- --encode_type          If set, use type layer initialize entity embeddings. 
- --load_experiment      Path to load trained ckpt, only relative path to --checkpoint_dir is acceptable. 
- --is_eval              If set, code will run fast evaluation mode on test set with trained ckpt from --load_experiment option.
- --reason_kb            If set, model will reason step by step. Otherwise, model may focus on all nodes on graph every step.
- --load_teacher         Path to load teacher ckpt, only relative path to --checkpoint_dir is acceptable. 
+- data_folder          Path to load dataset.
+- checkpoint_dir       Path to save checkpoint and logs.
+- num_step             Multi-hop reasoning steps, hyperparameters.
+- entity_dim           Hidden size of reasoning module.
+- eval_every           Number of interval epoches between evaluation.
+- experiment_name      The name of log and ckpt. If not defined, it will be generated with timestamp.
+- eps                  Accumulated probability to collect answers, used to generate answers and affect Precision, Recalll and F1 metric.
+- use_self_loop        If set, add a self-loop edge to all graph nodes.
+- use_inverse_relation If set, add reverse edges to graph.
+- encode_type          If set, use type layer initialize entity embeddings. 
+- load_experiment      Path to load trained ckpt, only relative path to --checkpoint_dir is acceptable. 
+- is_eval              If set, code will run fast evaluation mode on test set with trained ckpt from --load_experiment option.
+- reason_kb            If set, model will reason step by step. Otherwise, model may focus on all nodes on graph every step.
+- load_teacher         Path to load teacher ckpt, only relative path to --checkpoint_dir is acceptable. 
  
 For the WebQSP dataset, the `num_step` is selected from {3, 5}, and for the CWQ dataset, it is chosen from {4, 7}.
 
